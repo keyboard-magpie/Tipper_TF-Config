@@ -31,6 +31,7 @@ LV_IMG_DECLARE(tipperlogo);
 /* static struct zmk_widget_wpm_status wpm_status_widget; */
 /* #endif */
 
+
 lv_style_t global_style;
 
 lv_obj_t *zmk_display_status_screen() {
