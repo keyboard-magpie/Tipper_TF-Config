@@ -218,7 +218,7 @@ const lv_img_dsc_t tipperlogo = {
   .header.always_zero = 0,
   .header.w = 200,
   .header.h = 200,
-  .data_size = 5008,
+  .data_size = 5009,
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
   .data = tipperlogo_map,
 };
