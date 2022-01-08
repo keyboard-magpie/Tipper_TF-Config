@@ -24,14 +24,12 @@ static lv_style_t label_style;
 
 LV_IMG_DECLARE(bat_100);
 LV_IMG_DECLARE(bat_100_c);
-LV_IMG_DECLARE(bat_80);
-LV_IMG_DECLARE(bat_80_c);
-LV_IMG_DECLARE(bat_60);
-LV_IMG_DECLARE(bat_60_c);
-LV_IMG_DECLARE(bat_40);
-LV_IMG_DECLARE(bat_40_c);
-LV_IMG_DECLARE(bat_20);
-LV_IMG_DECLARE(bat_20_c);
+LV_IMG_DECLARE(bat_75);
+LV_IMG_DECLARE(bat_75_c);
+LV_IMG_DECLARE(bat_50);
+LV_IMG_DECLARE(bat_50_c);
+LV_IMG_DECLARE(bat_25);
+LV_IMG_DECLARE(bat_25_c);
 LV_IMG_DECLARE(bat_00);
 LV_IMG_DECLARE(bat_00_c);
 
@@ -71,35 +69,29 @@ void set_battery_symbol(lv_obj_t *icon) {
     uint8_t level = battery_status_state.level;
 
 #if IS_ENABLED(CONFIG_USB)
-    if (level > 80) {
+    if (level > 75) {
         if (battery_status_state.usb_present) {
              lv_img_set_src(icon, &bat_100_c);
         }else{
             lv_img_set_src(icon, &bat_100);
         }
-    } else if (level > 60) {
+    } else if (level > 50) {
         if (battery_status_state.usb_present) {
-             lv_img_set_src(icon, &bat_80_c);
+             lv_img_set_src(icon, &bat_75_c);
         }else{
-            lv_img_set_src(icon, &bat_80);
+            lv_img_set_src(icon, &bat_75);
         }
-    } else if (level > 40) {
+    } else if (level > 25) {
         if (battery_status_state.usb_present) {
-             lv_img_set_src(icon, &bat_60_c);
+             lv_img_set_src(icon, &bat_50_c);
         }else{
-            lv_img_set_src(icon, &bat_60);
-        }
-    } else if (level > 20) {
-        if (battery_status_state.usb_present) {
-             lv_img_set_src(icon, &bat_40_c);
-        }else{
-            lv_img_set_src(icon, &bat_40);
+            lv_img_set_src(icon, &bat_50);
         }
     } else if (level > 5) {
         if (battery_status_state.usb_present) {
-             lv_img_set_src(icon, &bat_20_c);
+             lv_img_set_src(icon, &bat_25_c);
         }else{
-            lv_img_set_src(icon, &bat_20);
+            lv_img_set_src(icon, &bat_25);
         }
     } else {
         if (battery_status_state.usb_present) {
