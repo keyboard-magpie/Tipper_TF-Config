@@ -43,7 +43,7 @@ static void set_status_symbol(lv_obj_t *label, struct output_status_state state)
 
     switch (state.selected_endpoint) {
     case ZMK_ENDPOINT_USB:
-        strcat(text, LV_SYMBOL_USB "   ");
+        strcat(text, LV_SYMBOL_USB "hello");
         break;
     case ZMK_ENDPOINT_BLE:
         if (state.active_profile_bonded) {
