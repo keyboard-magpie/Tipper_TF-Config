@@ -27,4 +27,4 @@ zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_status_screen.c)
 zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_logo.c)
 zephyr_library_sources(${ZEPHYR_BASE}/misc/empty_file.c)
 zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
-zephyr_library_include_directories(${ZEPHYR_BASE}/drivers);
+zephyr_library_include_directories(${ZEPHYR_BASE}/drivers)
