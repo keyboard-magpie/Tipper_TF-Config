@@ -8,6 +8,7 @@ set_property(GLOBAL APPEND PROPERTY extra_post_build_commands
 )
 
 target_sources_ifdef(CONFIG_CUSTOM_WIDGET_BATTERY_STATUS app PRIVATE battery_status.c)
+target_sources_ifdef(CONFIG_CUSTOM_WIDGET_OUTPUT_STATUS app PRIVATE output_status.c)
 
 zephyr_library()
 zephyr_library_include_directories(${ZEPHYR_LVGL_MODULE_DIR})
@@ -26,4 +27,4 @@ zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_status_screen.c)
 zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_logo.c)
 zephyr_library_sources(${ZEPHYR_BASE}/misc/empty_file.c)
 zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
-zephyr_library_include_directories(${ZEPHYR_BASE}/drivers)
+zephyr_library_include_directories(${ZEPHYR_BASE}/drivers);
