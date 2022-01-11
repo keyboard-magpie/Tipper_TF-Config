@@ -55,7 +55,7 @@ static struct output_status_state get_state(const zmk_event_t *_eh) {
 }
 
 static void set_status_symbol(lv_obj_t *icon, struct output_status_state state) {
-    char text[9] = {};
+    // char text[9] = {};
 
     k_mutex_lock(&output_status_mutex, K_FOREVER);
 
@@ -106,7 +106,7 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
 
     lv_obj_add_style(widget->obj, LV_LABEL_PART_MAIN, &label_style);
 
-    set_status_symbol(widget->obj);
+    set_status_symbol(widget->obj, struct output_status_state);
 
     sys_slist_append(&widgets, &widget->node);
 
