@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors, MarvFPV
+ * Copyright (c) 2020 The ZMK Contributors, 2022 MarvFPV
  *
  * SPDX-License-Identifier: MIT
  */
@@ -24,7 +24,9 @@ static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 static lv_style_t label_style;
 
 LV_IMG_DECLARE(usb_out);
-LV_IMG_DECLARE(bt_out);
+LV_IMG_DECLARE(bt_out_ok);
+LV_IMG_DECLARE(bt_out_nc);
+LV_IMG_DECLARE(bt_out_search);
 
 /*
 LV_IMG_DECLARE(bt_pro_0);
@@ -64,21 +66,15 @@ static void set_status_symbol(lv_obj_t *icon, struct output_status_state state) 
         lv_img_set_src(icon, &usb_out);
         break;
     case ZMK_ENDPOINT_BLE:
-        lv_img_set_src(icon, &bt_out);
-        /*
         if (state.active_profile_bonded) {
             if (state.active_profile_connected) {
-                snprintf(text, sizeof(text), LV_SYMBOL_WIFI "%i " LV_SYMBOL_OK,
-                         state.active_profile_index);
+                lv_img_set_src(icon, &bt_out_ok);
             } else {
-                snprintf(text, sizeof(text), LV_SYMBOL_WIFI "%i " LV_SYMBOL_CLOSE,
-                         state.active_profile_index);
+                lv_img_set_src(icon, &bt_out_nc);
             }
         } else {
-            snprintf(text, sizeof(text), LV_SYMBOL_WIFI "%i " LV_SYMBOL_SETTINGS,
-                     state.active_profile_index);
+            lv_img_set_src(icon, &bt_out_search);
         }
-        */
         break;
     }
 
