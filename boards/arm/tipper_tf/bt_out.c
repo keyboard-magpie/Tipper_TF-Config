@@ -3,10 +3,10 @@
 #ifndef LV_ATTRIBUTE_MEM_ALIGN
 #define LV_ATTRIBUTE_MEM_ALIGN
 #endif
-#ifndef LV_ATTRIBUTE_IMG_BAT_50
-#define LV_ATTRIBUTE_IMG_BAT_50
+#ifndef LV_ATTRIBUTE_IMG_BT_OUT
+#define LV_ATTRIBUTE_IMG_BT_OUT
 #endif
-const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_IMG_BAT_50 uint8_t bat_50_map[] = {
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_IMG_BT_OUT uint8_t bt_out_map[] = {
   0xff, 0xff, 0xff, 0xff, 	/*Color of index 0*/
   0x00, 0x00, 0x00, 0xff, 	/*Color of index 1*/
 
@@ -45,11 +45,11 @@ const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_IMG_BAT_50 uint8_t bat_50_map[] = {
   0x07, 0x0f, 0xf8, 0x70, 0x00, 
 };
 
-const lv_img_dsc_t bat_50 = {
+const lv_img_dsc_t bt_out = {
   .header.always_zero = 0,
   .header.w = 33,
   .header.h = 33,
   .data_size = 174,
   .header.cf = LV_IMG_CF_INDEXED_1BIT,
-  .data = bat_50_map,
+  .data = bt_out_map,
 };

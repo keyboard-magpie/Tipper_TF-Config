@@ -64,7 +64,7 @@ static void set_status_symbol(lv_obj_t *icon, struct output_status_state state) 
         lv_img_set_src(icon, &usb_out);
         break;
     case ZMK_ENDPOINT_BLE:
-        lv_img_set_src(icon,&bt_out);
+        lv_img_set_src(icon, &bt_out);
         /*
         if (state.active_profile_bonded) {
             if (state.active_profile_connected) {
