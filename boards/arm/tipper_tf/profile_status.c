@@ -56,7 +56,7 @@ static struct profile_status_state get_state(const zmk_event_t *_eh) {
     ;
 }
 
-static void set_status_symbol(lv_obj_t *icon, struct profile_status_state state) {
+static void set_profile_status_symbol(lv_obj_t *icon, struct profile_status_state state) {
     // char text[9] = {};
 
     k_mutex_lock(&profile_status_mutex, K_FOREVER);
@@ -83,7 +83,7 @@ static void set_status_symbol(lv_obj_t *icon, struct profile_status_state state)
 
 static void profile_status_update_cb(struct profile_status_state state) {
     struct custom_widget_profile_status *widget;
-    SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_status_symbol(widget->obj, state); }
+    SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_profile_status_symbol(widget->obj, state); }
 }
 
 ZMK_DISPLAY_WIDGET_LISTENER(widget_profile_status, struct profile_status_state,
