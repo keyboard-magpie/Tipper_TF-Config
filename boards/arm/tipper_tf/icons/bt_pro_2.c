@@ -6,7 +6,7 @@
 #ifndef LV_ATTRIBUTE_IMG_BT_PRO_2
 #define LV_ATTRIBUTE_IMG_BT_PRO_2
 #endif
-const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_IMG_BAT_50 uint8_t bat_50_map[] = {
+const LV_ATTRIBUTE_MEM_ALIGN LV_ATTRIBUTE_IMG_BT_PRO_2 uint8_t bt_pro_2_map[] = {
   0xff, 0xff, 0xff, 0xff, 	/*Color of index 0*/
   0x00, 0x00, 0x00, 0xff, 	/*Color of index 1*/
 
