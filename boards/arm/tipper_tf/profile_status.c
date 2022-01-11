@@ -23,18 +23,11 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 static lv_style_t label_style;
 
-LV_IMG_DECLARE(usb_out);
-LV_IMG_DECLARE(bt_out_ok);
-LV_IMG_DECLARE(bt_out_nc);
-LV_IMG_DECLARE(bt_out_search);
-
-/*
 LV_IMG_DECLARE(bt_pro_0);
 LV_IMG_DECLARE(bt_pro_1);
 LV_IMG_DECLARE(bt_pro_2);
 LV_IMG_DECLARE(bt_pro_3);
 LV_IMG_DECLARE(bt_pro_4);
-*/
 
 static bool style_initialized = false;
 
@@ -61,20 +54,21 @@ static void set_profile_status_symbol(lv_obj_t *icon, struct profile_status_stat
 
     k_mutex_lock(&profile_status_mutex, K_FOREVER);
 
-    switch (state.selected_endpoint) {
-    case ZMK_ENDPOINT_USB:
-        lv_img_set_src(icon, &usb_out);
+    switch (state.active_profile_index) {
+    case 0:
+        lv_img_set_src(icon, &bt_pro_0);
         break;
-    case ZMK_ENDPOINT_BLE:
-        if (state.active_profile_bonded) {
-            if (state.active_profile_connected) {
-                lv_img_set_src(icon, &bt_out_ok);
-            } else {
-                lv_img_set_src(icon, &bt_out_nc);
-            }
-        } else {
-            lv_img_set_src(icon, &bt_out_search);
-        }
+    case 1:
+        lv_img_set_src(icon, &bt_pro_1);
+        break;
+    case 2:
+        lv_img_set_src(icon, &bt_pro_2);
+        break;
+    case 3:
+        lv_img_set_src(icon, &bt_pro_3);
+        break;
+    case 4:
+        lv_img_set_src(icon, &bt_pro_4);
         break;
     }
 
