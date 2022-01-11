@@ -82,7 +82,7 @@ static void set_status_symbol(lv_obj_t *icon, struct output_status_state state) 
         break;
     }
 
-   k_mutex_unlock(&battery_status_mutex); 
+   k_mutex_unlock(&output_status_mutex); 
 }
 
 static void output_status_update_cb(struct output_status_state state) {
