@@ -1,6 +1,6 @@
 /*
 *
-* Copyright (c) 2021 Darryl deHaan, 2021 weteor
+* Copyright (c) 2021 Darryl deHaan, 2021 weteor, 2022 MarvFPV
 * SPDX-License-Identifier: MIT
 *
 */

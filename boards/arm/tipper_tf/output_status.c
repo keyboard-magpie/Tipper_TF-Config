@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2020 The ZMK Contributors
+ * Copyright (c) 2020 The ZMK Contributors, MarvFPV
  *
  * SPDX-License-Identifier: MIT
  */
@@ -11,7 +11,7 @@
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/display.h>
-#include <zmk/display/widgets/output_status.h>
+#include "output_status.h"
 #include <zmk/event_manager.h>
 #include <zmk/events/usb_conn_state_changed.h>
 #include <zmk/events/ble_active_profile_changed.h>
@@ -21,6 +21,22 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/endpoints.h>
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
+static lv_style_t label_style;
+
+LV_IMG_DECLARE(usb_out);
+LV_IMG_DECLARE(bt_out);
+
+/*
+LV_IMG_DECLARE(bt_pro_0);
+LV_IMG_DECLARE(bt_pro_1);
+LV_IMG_DECLARE(bt_pro_2);
+LV_IMG_DECLARE(bt_pro_3);
+LV_IMG_DECLARE(bt_pro_4);
+*/
+
+static bool style_initialized = false;
+
+K_MUTEX_DEFINE(output_status_mutex);
 
 struct output_status_state {
     enum zmk_endpoint selected_endpoint;
@@ -38,14 +54,18 @@ static struct output_status_state get_state(const zmk_event_t *_eh) {
     ;
 }
 
-static void set_status_symbol(lv_obj_t *label, struct output_status_state state) {
+static void set_status_symbol(lv_obj_t *icon, struct output_status_state state) {
     char text[9] = {};
+
+    k_mutex_lock(&output_status_mutex, K_FOREVER);
 
     switch (state.selected_endpoint) {
     case ZMK_ENDPOINT_USB:
-        strcat(text, LV_SYMBOL_USB "hello");
+        lv_img_set_src(icon, &usb_out);
         break;
     case ZMK_ENDPOINT_BLE:
+        lv_img_set_src(icon,&bt_out);
+        /*
         if (state.active_profile_bonded) {
             if (state.active_profile_connected) {
                 snprintf(text, sizeof(text), LV_SYMBOL_WIFI "%i " LV_SYMBOL_OK,
@@ -58,10 +78,11 @@ static void set_status_symbol(lv_obj_t *label, struct output_status_state state)
             snprintf(text, sizeof(text), LV_SYMBOL_WIFI "%i " LV_SYMBOL_SETTINGS,
                      state.active_profile_index);
         }
+        */
         break;
     }
 
-    lv_label_set_text(label, text);
+   k_mutex_unlock(&battery_status_mutex); 
 }
 
 static void output_status_update_cb(struct output_status_state state) {
@@ -81,9 +102,11 @@ ZMK_SUBSCRIPTION(widget_output_status, zmk_ble_active_profile_changed);
 #endif
 
 int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_obj_t *parent) {
-    widget->obj = lv_label_create(parent, NULL);
+    widget->obj = lv_img_create(parent, NULL);
 
-    lv_obj_set_size(widget->obj, 40, 15);
+    lv_obj_add_style(widget->obj, LV_LABEL_PART_MAIN, &label_style);
+
+    set_status_symbol(widget->obj);
 
     sys_slist_append(&widgets, &widget->node);
 

@@ -23,6 +23,10 @@ zephyr_library_sources(bat_25.c)
 zephyr_library_sources(bat_25_c.c)
 zephyr_library_sources(bat_00.c)
 zephyr_library_sources(bat_00_c.c)
+
+zephyr_library_sources(usb_out.c)
+zephyr_library_sources(bt_out.c)
+
 zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_status_screen.c)
 zephyr_library_sources_ifdef(CONFIG_ZMK_DISPLAY tipper_tf_logo.c)
 zephyr_library_sources(${ZEPHYR_BASE}/misc/empty_file.c)
