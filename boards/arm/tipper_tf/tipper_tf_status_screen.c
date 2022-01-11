@@ -6,7 +6,7 @@
 
 #include <zmk/display/widgets/output_status.h>
 #include <zmk/display/widgets/battery_status.h>
-#include <profile_status.h>
+#include <zmk/app/boards/arm/tipper_tf/profile_status.h>
 #include <zmk/display/widgets/layer_status.h>
 #include <zmk/display/widgets/wpm_status.h>
 #include <zmk/display/status_screen.h>
