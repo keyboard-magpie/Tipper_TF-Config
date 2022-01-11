@@ -82,7 +82,7 @@ static void set_status_symbol(lv_obj_t *icon, struct profile_status_state state)
 }
 
 static void profile_status_update_cb(struct profile_status_state state) {
-    struct zmk_widget_profile_status *widget;
+    struct custom_widget_profile_status *widget;
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_status_symbol(widget->obj, state); }
 }
 
@@ -97,7 +97,7 @@ ZMK_SUBSCRIPTION(widget_profile_status, zmk_usb_conn_state_changed);
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_ble_active_profile_changed);
 #endif
 
-int zmk_widget_profile_status_init(struct zmk_widget_profile_status *widget, lv_obj_t *parent) {
+int custom_widget_profile_status_init(struct custom_widget_profile_status *widget, lv_obj_t *parent) {
     widget->obj = lv_img_create(parent, NULL);
 
     lv_obj_add_style(widget->obj, LV_LABEL_PART_MAIN, &label_style);
@@ -108,6 +108,6 @@ int zmk_widget_profile_status_init(struct zmk_widget_profile_status *widget, lv_
     return 0;
 }
 
-lv_obj_t *zmk_widget_profile_status_obj(struct zmk_widget_profile_status *widget) {
+lv_obj_t *custom_widget_profile_status_obj(struct custom_widget_profile_status *widget) {
     return widget->obj;
 }
