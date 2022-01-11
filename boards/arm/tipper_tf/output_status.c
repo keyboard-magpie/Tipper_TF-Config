@@ -106,7 +106,7 @@ int zmk_widget_output_status_init(struct zmk_widget_output_status *widget, lv_ob
 
     lv_obj_add_style(widget->obj, LV_LABEL_PART_MAIN, &label_style);
 
-    set_status_symbol(widget->obj, struct output_status_state);
+    set_status_symbol(widget->obj, output_status_state);
 
     sys_slist_append(&widgets, &widget->node);
 
