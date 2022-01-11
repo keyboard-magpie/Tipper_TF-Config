@@ -76,6 +76,9 @@ menuconfig CUSTOM_WIDGET_BATTERY_STATUS
 menuconfig CUSTOM_WIDGET_OUTPUT_STATUS
 	bool "custom output status widget"
 
+menuconfig CUSTOM_WIDGET_PROFILE_STATUS
+	bool "custom profile status widget"
+
 
 config BT_CTLR
         default BT

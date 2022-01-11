@@ -19,9 +19,12 @@ LV_IMG_DECLARE(tipperlogo);
 static struct zmk_widget_battery_status battery_status_widget;
 #endif
 
-
 #if IS_ENABLED(CONFIG_CUSTOM_WIDGET_OUTPUT_STATUS)
 static struct zmk_widget_output_status output_status_widget;
+#endif
+
+#if IS_ENABLED(CONFIG_CUSTOM_WIDGET_PROFILE_STATUS)
+static struct zmk_widget_profile_status profile_status_widget;
 #endif
 
 
@@ -72,6 +75,10 @@ lv_obj_t *zmk_display_status_screen() {
     lv_obj_align(zmk_widget_output_status_obj(&output_status_widget), NULL, LV_ALIGN_IN_BOTTOM_RIGHT, 0, 0);
 #endif
 
+#if IS_ENABLED(CONFIG_CUSTOM_WIDGET_PROFILE_STATUS)
+    zmk_widget_profile_status_init(&profile_status_widget, screen);
+    lv_obj_align(zmk_widget_profile_status_obj(&profile_status_widget), NULL, LV_ALIGN_IN_TOP_MID, 0, 0);
+#endif
 
 /*
     center_frame = lv_cont_create(screen, NULL);

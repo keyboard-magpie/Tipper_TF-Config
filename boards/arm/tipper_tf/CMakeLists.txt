@@ -9,6 +9,7 @@ set_property(GLOBAL APPEND PROPERTY extra_post_build_commands
 
 target_sources_ifdef(CONFIG_CUSTOM_WIDGET_BATTERY_STATUS app PRIVATE battery_status.c)
 target_sources_ifdef(CONFIG_CUSTOM_WIDGET_OUTPUT_STATUS app PRIVATE output_status.c)
+target_sources_ifdef(CONFIG_CUSTOM_WIDGET_PROFILE_STATUS app PRIVATE profile_status.c)
 
 zephyr_library()
 zephyr_library_include_directories(${ZEPHYR_LVGL_MODULE_DIR})
