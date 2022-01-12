@@ -84,11 +84,11 @@ static void profile_status_update_cb(struct profile_status_state state) {
     SYS_SLIST_FOR_EACH_CONTAINER(&widgets, widget, node) { set_profile_status_symbol(widget->obj, state); }
 }
 
-/*
+
 ZMK_DISPLAY_WIDGET_LISTENER(widget_profile_status, struct profile_status_state,
                             profile_status_update_cb, get_state)
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_endpoint_selection_changed);
-*/
+
 
 #if defined(CONFIG_USB)
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_usb_conn_state_changed);
