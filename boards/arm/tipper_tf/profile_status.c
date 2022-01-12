@@ -90,14 +90,13 @@ ZMK_DISPLAY_WIDGET_LISTENER(widget_profile_status, struct profile_status_state,
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_endpoint_selection_changed);
 */
 
-/*
 #if defined(CONFIG_USB)
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_usb_conn_state_changed);
 #endif
 #if defined(CONFIG_ZMK_BLE)
 ZMK_SUBSCRIPTION(widget_profile_status, zmk_ble_active_profile_changed);
 #endif
-*/
+
 
 int custom_widget_profile_status_init(struct custom_widget_profile_status *widget, lv_obj_t *parent) {
     widget->obj = lv_img_create(parent, NULL);
