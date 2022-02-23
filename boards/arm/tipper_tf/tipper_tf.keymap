@@ -88,7 +88,7 @@ Default
 	|  Q  |  W  |  E  |  R  |  T  |          |  Y  |  U  |  I  |  O  |  P  |
 	|  A  |  S  |  D  |  F  |  G  |          |  H  |  J  |  K  |  L  |  ;  |
 	|  Z  |  X  |  C  |  V  |  B  |          |  N  |  M  |  ,  |  .  |  /  |
-	'-----------------\ SYM | SFT |          | SPC | ALT /-----------------'
+	'-----------------\ SYM | SFT |          | SPC | ENT /-----------------'
 	                   '--------------------------------'
 
 Numbers and symbold
@@ -96,7 +96,7 @@ Numbers and symbold
 	|  1  |  2  |  3  |  4  |  5  |          |  6  |  7  |  8  |  9  |  0  |
 	|  !  |  @  |  #  |  $  |  %  |          |  `  |  +  |  -  |  *  |  '  |
 	|  [  |  (  |  )  |  ]  |     |          |  \  |  ;  |  '  |  =  |  =  |
-	'-----------------\ SYM | SFT |          | SPC | ALT /-----------------'
+	'-----------------\ SYM | SFT |          | SPC | ENT /-----------------'
 	                   '--------------------------------'
 
 Bluetooth
@@ -104,7 +104,7 @@ Bluetooth
 	| BL  | BT0 | BT1 | BT2 | BT3 |     	 | BT4 |     |     |     |     |
 	|     |     |     |     |     |     	 |     |     |     |     | RST |
 	|     |     |     |     |     |          |     |     |     |	 | CLR |
-	'-----------------\ SYM | SFT |          | SPC | ALT /-----------------'
+	'-----------------\ SYM | SFT |          | SPC | ENT /-----------------'
 	                   '--------------------------------'
 
 Navigation
@@ -112,7 +112,7 @@ Navigation
 	| F1  | F2  | F3  | F4  |     |          |     | ← ← |  ↑  | → → | ScS |
 	| F5  | F6  | F7  | F8  |     |          |     |  ←  |  ↓  |  →  |     |
 	| F9  | F10 | F11 | F12 |     |          | MPR | MPP | MNX | MVU | MVD |
-	'-----------------\ SYM | SFT |          | SPC | ALT /-----------------'
+	'-----------------\ SYM | SFT |          | SPC | ENT /-----------------'
 	                   '--------------------------------'
 */
 
@@ -125,7 +125,7 @@ Navigation
 	&kp Q            &kp W         &kp E         &kp R         &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P
     &am LGUI A       &am LALT S    &am LCTRL D   &am LSHFT F   &kp G            &kp H            &am RSHFT J      &am RCTRL K      &am RALT L       &am RGUI SEMI
 	&am LSHFT Z      &kp X         &kp C         &kp V         &lt BLUETOOTH B  &kp N            &kp M            &am RGUI CMMA    &kp DOT          &am RSHFT SLASH   
-                                                 &mo NAV       &kp LSHFT        &lt NUMSYM SPACE &kp RALT  
+                                                 &mo NAV       &kp LSHFT        &lt NUMSYM SPACE &kp ENTER  
 			>;
 		};
 		numsym_layer {
