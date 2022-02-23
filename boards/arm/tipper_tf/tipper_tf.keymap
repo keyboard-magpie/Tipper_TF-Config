@@ -27,7 +27,7 @@
 		};
 		combo_bpc {
 			timeout-ms = <27>;
-			key-positions = <17 18>;
+			key-positions = <11 12>;
 			bindings = <&kp BSPC>;
 		};
 		combo_del {
@@ -40,31 +40,41 @@
 			key-positions = <18 19>;
 			bindings = <&kp ENTER>;
 		};
-		combo_ae {
-		    	timeout-ms = <27>;
-            		key-positions = <10 11>;
-            		bindings = <&kp RA(Q) >;
-        	};
-        	combo_ue {
-            		timeout-ms = <27>;
-            		key-positions = <6 7>;
-            		bindings = <&kp RA(Y) >;
-        	};
-        		combo_oe {
-            		timeout-ms = <27>;
-            		key-positions = <8 9>;
-            		bindings = <&kp RA(P) >;
-        	};
-        	combo_ss {
-            		timeout-ms = <27>;
-            		key-positions = <11 12>;
-            		bindings = <&kp RA(S) >;
-        	};
         	combo_caps {
             		timeout-ms = <27>;
             		key-positions = <13 16>;
             		bindings = <&kp CAPS>;
         	};
+		combo_quote {
+			timeout-ms = <27>;
+			key-positions = <25 26>;
+			bindings = <&kp APOSTROPHE>;
+		};
+		combo_minus {
+			timeout-ms = <27>;
+			key-positions = <21 22>;
+			bindings = <&kp MINUS>;
+		};
+		combo_less {
+			timeout-ms = <27>;
+			key-positions = <15 16>;
+			bindings = <&kp LESS_THAN>;
+		};
+		combo_more {
+			timeout-ms = <27>;
+			key-positions = <17 18>;
+			bindings = <&kp GREATER_THAN>;
+		};
+		combo_score {
+			timeout-ms = <27>;
+			key-positions = <26 27>;
+			bindings = <&kp UNDER>;
+		};
+		combo_slash {
+			timeout-ms = <27>;
+			key-positions = <8 9>;
+			bindings = <&kp GREATER_THAN>;
+		};
     };
 };
 
