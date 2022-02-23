@@ -140,9 +140,9 @@ Navigation
 		default_layer {
 			bindings = <
 	&kp Q            &kp W         &kp E         &kp R         &kp T            &kp Y            &kp U            &kp I            &kp O            &kp P
-    &am LGUI A       &am LALT S    &am LCTRL D   &am LSHFT F   &kp G            &kp H            &am RSHFT J      &am RCTRL K      &am RALT L       &am RGUI SEMI
+        &am LGUI A       &am LALT S    &am LCTRL D   &am LSHFT F   &kp G            &kp H            &am RSHFT J      &am RCTRL K      &am RALT L       &am RGUI SEMI
 	&am LSHFT Z      &kp X         &kp C         &kp V         &lt BLUETOOTH B  &kp N            &kp M            &am RGUI CMMA    &kp DOT          &am RSHFT SLASH   
-                                                 &lt NAV LGUI       &kp LSHFT        &lt NUMSYM SPACE &kp ENTER  
+                                                     &lt NAV LGUI  &mt LSHFT SPACE  &lt NUMSYM SPACE &kp ENTER  
 			>;
 		};
 		numsym_layer {
