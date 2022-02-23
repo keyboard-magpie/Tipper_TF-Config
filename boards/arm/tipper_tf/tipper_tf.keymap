@@ -41,30 +41,30 @@
 			bindings = <&kp ENTER>;
 		};
 		combo_ae {
-            timeout-ms = <27>;
-            key-positions = <10 11>;
-            bindings = <&kp RA(Q) >;
-        };
-        combo_ue {
-            timeout-ms = <27>;
-            key-positions = <6 7>;
-            bindings = <&kp RA(Y) >;
-        };
-        combo_oe {
-            timeout-ms = <27>;
-            key-positions = <8 9>;
-            bindings = <&kp RA(P) >;
-        };
-        combo_ss {
-            timeout-ms = <27>;
-            key-positions = <11 12>;
-            bindings = <&kp RA(S) >;
-        };
-        combo_caps {
-            timeout-ms = <27>;
-            key-positions = <13 16>;
-            bindings = <&kp CAPS>;
-        };
+		    	timeout-ms = <27>;
+            		key-positions = <10 11>;
+            		bindings = <&kp RA(Q) >;
+        	};
+        	combo_ue {
+            		timeout-ms = <27>;
+            		key-positions = <6 7>;
+            		bindings = <&kp RA(Y) >;
+        	};
+        		combo_oe {
+            		timeout-ms = <27>;
+            		key-positions = <8 9>;
+            		bindings = <&kp RA(P) >;
+        	};
+        	combo_ss {
+            		timeout-ms = <27>;
+            		key-positions = <11 12>;
+            		bindings = <&kp RA(S) >;
+        	};
+        	combo_caps {
+            		timeout-ms = <27>;
+            		key-positions = <13 16>;
+            		bindings = <&kp CAPS>;
+        	};
     };
 };
 
