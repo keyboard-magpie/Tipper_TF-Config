@@ -43,7 +43,7 @@
 
 //Custom tap hold behavior 
 
-/ {
+/  {
         behaviors {
         am: alpha_mods {
             compatible = "zmk,behavior-hold-tap";
