@@ -29,19 +29,19 @@
         compatible = "zmk,combos";
 
 
-          COMBO(escape, &kp ESCAPE, 0 1)
-	 				COMBO(tab, &kp TAB, 1 2)
-          COMBO(backspace, &kp BACKSPACE, 11 12)
-	  			COMBO(del, &kp DELETE, 7 8)
-	  			COMBO(enter, &kp ENTER, 10 11)
-          COMBO(quote, &kp APOSTROPHE, 25 26)
-          COMBO(minus, &kp MINUS, 21 22)
-          COMBO(less, &kp LESS_THAN, 15 16)
-          COMBO(more, &kp GREATER_THAN, 17 18)
-          COMBO(score, &kp UNDER, 26 27)
-          COMBO(slash, &kp BACKSLASH, 8 9)
-	  			COMBO(caps, &kp CAPS, 13 16)
-          COMBO(btc, &bt BT_CLR, 0 29)
+         COMBO(escape, &kp ESCAPE, 0 1)
+	 COMBO(tab, &kp TAB, 1 2)
+         COMBO(backspace, &kp BACKSPACE, 11 12)
+	 COMBO(del, &kp DELETE, 7 8)
+	 COMBO(enter, &kp ENTER, 10 11)
+         COMBO(quote, &kp APOSTROPHE, 25 26)
+         COMBO(minus, &kp MINUS, 21 22)
+         COMBO(less, &kp LESS_THAN, 15 16)
+         COMBO(more, &kp GREATER_THAN, 17 18)
+         COMBO(score, &kp UNDER, 26 27)
+         COMBO(slash, &kp BACKSLASH, 8 9)
+	 COMBO(caps, &kp CAPS, 13 16)
+         COMBO(btc, &bt BT_CLR, 0 29)
 };
 
 //Custom tap hold behavior 
