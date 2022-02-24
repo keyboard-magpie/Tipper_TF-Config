@@ -39,7 +39,7 @@
           COMBO(more, &kp GREATER_THAN, 17 18)
           COMBO(score, &kp UNDER, 26 27)
           COMBO(slash, &kp BACKSLASH, 8 9)
-	  COMBO(caps, &kp CAPS, 13 16)
+	  COMBO(caps, &kp CAPSLOCK, 13 16)
           COMBO(btc, &bt BT_CLR, 0 29)
 
 
