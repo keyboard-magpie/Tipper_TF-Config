@@ -52,7 +52,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "ALPHA_MODS";
             #binding-cells = <2>;
-            tapping_term_ms = <170>;
+            tapping_term_ms = <200>;
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
